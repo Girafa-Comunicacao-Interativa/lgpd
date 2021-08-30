@@ -207,7 +207,7 @@
       backdrop-filter: blur(3px);
     }
 
-    &.animating {
+    &.lgpd-animating {
       .lgpd-bar {
         border-radius: 0.5em;
 
@@ -257,7 +257,7 @@
       }
     }
 
-    &.done {
+    &.lgpd-done {
       .lgpd-bar {
         .lgpd-header {
           .lgpd-accept {
@@ -270,7 +270,7 @@
     }
   }
 
-  &.destroy {
+  &.lgpd-destroy {
     .lgpd-bar {
       transform: scale3d(1.05, 1.05, 1);
       filter: blur(5px);

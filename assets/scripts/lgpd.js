@@ -57,8 +57,8 @@ function resetDesktopBar() {
 
   bar.removeAttribute('style')
   acceptButton.removeAttribute('style')
-  bar.classList.remove('animating')
-  bar.classList.remove('done')
+  bar.classList.remove('lgpd-animating')
+  bar.classList.remove('lgpd-done')
   disableOverflow(false)
   disableTabIndex(false)
 }
@@ -109,7 +109,7 @@ function toggleLGPD(behavior) {
 
     isAnimating = true
 
-    if (!container.classList.contains('done')) {
+    if (!container.classList.contains('lgpd-done')) {
       openLGPD()
     } else {
       closeLGPD()
@@ -123,21 +123,21 @@ function toggleLGPD(behavior) {
   }
 
   function openLGPD() {
-    container.classList.add('animating')
+    container.classList.add('lgpd-animating')
     disableOverflow(true)
     setMobileDistances(true)
     disableTabIndex(false)
     hideFilter(false)
 
     setTimeout(() => {
-      container.classList.add('done')
+      container.classList.add('lgpd-done')
       isAnimating = false
     }, 300)
   }
 
   function closeLGPD() {
-    container.classList.remove('done')
-    container.classList.remove('animating')
+    container.classList.remove('lgpd-done')
+    container.classList.remove('lgpd-animating')
 
     setTimeout(() => {
       setMobileDistances(false)
@@ -169,15 +169,16 @@ function destroyLGPD() {
   const container = document.querySelector('.lgpd-container')
 
   saveOnDatabase()
-  container.classList.add('destroy')
+  container.classList.add('lgpd-destroy')
 
   setTimeout(() => {
+    disableOverflow(false)
     container.remove()
   }, 150)
 }
 
 window.addEventListener('resize', function () {
-  const isContainerVisible = document.querySelector('.lgpd-container').classList.contains('done')
+  const isContainerVisible = document.querySelector('.lgpd-container').classList.contains('lgpd-done')
 
   if (window.matchMedia("(max-width: 767px)").matches) {
     setMobileDistances(isContainerVisible)
