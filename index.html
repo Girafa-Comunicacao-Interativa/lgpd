@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles/style.css">
+  <script src="assets/scripts/app.js" defer></script>
+  <title>LGPD</title>
+</head>
+
+<body>
+  <div class="lgpd-container">
+    <div class="lgpd-filter"></div>
+    <div class="lgpd-bar">
+      <div class="lgpd-header">
+        <button type="button" class="lgpd-mobile" onClick="toggleLGPD()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7" viewBox="0 0 14 7">
+            <path class="lgpd-arrow" d="M1473,2370.056l6.41-5.285,6.41,5.285" transform="translate(-1472.364 -2363.474)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </svg>
+          <p>
+            Termos de uso e privacidade
+          </p>
+        </button>
+        <button type="button" class="lgpd-accept" onClick="destroyLGPD()">
+          Aceitar
+        </button>
+      </div>
+      <div class="lgpd-content">
+        <p>
+          Nós usamos cookies e outras tecnologias semelhantes para melhorar a sua experiência em nossos serviços, personalizar publicidade e recomendar conteúdo de seu interesse.
+        </p>
+        <p>
+          Ao prosseguir você concorda com nossos <a href target="_blank">termos de uso</a> e <a href target="_blank">política de privacidade</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
